@@ -1,0 +1,123 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# +---------------------------------------------------------+ #
+# |         Bridge Race by Despical (Version 1.0.0)         | #
+# +---------------------------------------------------------+ #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# If you want to translate for us check out: https://github.com/Despical/LocaleStorage#locale-storage
+# Select locale of Bridge Race, default it's English.
+# Available locales:
+#    default - English language
+#    de - Deutsche sprache
+#    tr - Türkçe dili
+locale: default
+
+# Enable bossbar support?
+Bossbar-Enabled: true
+
+# How many seconds game should take to start.
+Starting-Waiting-Time: 5
+
+# How many seconds classic game should play.
+Classic-Gameplay-Time: 300
+
+# Should we allow to players to fight?
+Allow-PvP: false
+
+# Should we set player's level bar to how many blocks remaining to win for player?
+Show-Remaining-Blocks-To-Win: true
+
+# The material that is going to be given to player in-game.
+# Default game material is wool.
+Game-Material: WOOL
+
+# The delay between hitting players. Default is 4.
+# Works if 'Allow-PvP' option is enabled and if server's
+# version is 1.9 or higher.
+Hit-Cooldown-Delay: 16
+
+# Should we hook into bungee-cord? (If you wanna use arena per server option)
+# You STILL need to use external addon for HUB server game signs
+# Bridge Race doesn't offer that addon.
+BungeeActivated: false
+
+# Enable this option when you're using MySQL, otherwise it won't work.
+# Be careful when changing this because there is NO migrator between
+# flat file and MySQL for player stats.
+DatabaseActivated: false
+
+# Enable Inventory Manager for your games? (VERY USEFUL feature for MULTI ARENA)
+# This saves inventory of players and restores it after player leaves arena.
+# Saved elements: max health, health, food, experience, full inventory, armor contents, fire ticks, active potions, game mode and more
+InventoryManager: true
+
+# Should in-game chat format be enabled?
+# You can edit the formatting in language.yml
+ChatFormat-Enabled: true
+
+# Should we disable all chat related stuff?
+# It will disable the separated chat, for example
+Disable-Separate-Chat: false
+
+# Which blocks should we remove in game area after game finishes.
+# Also the arrows will be removed after the game as default.
+Whitelisted-Blocks:
+  - BLACK_WOOL
+
+# Should we disable animated level bar countdown when the game is in starting state.
+Disable-Level-Countdown: false
+
+# Should players can pickup the arrows or should we delete them when player tries to pickup?
+Pickup-Arrows: true
+
+# Basic permission for game, permission explained here: https://github.com/Despical/BridgeRace/wiki/Commands-and-permissions#basic-permissions
+Basic-Permissions:
+  # <arena> represents arena name (NOT MAP NAME), for example: 'br.join.BR02'
+  # use 'br.join.*' to enable access to all arenas
+  Join-Permission: "br.join.<arena>"
+
+# Should we enable short commands such as /leave
+Enable-Short-Commands: false
+
+# Should /cd leave command be blocked?
+Disable-Leave-Command: false
+
+# Commands which can be used in game, remove all of them to disable
+Whitelisted-Commands:
+  - me
+  - help
+
+# Enable in game rewards? See rewards.yml for more...
+Rewards-Enabled: false
+
+# Should we block every not Bridge Race associated commands in game?
+Block-Commands-In-Game: true
+
+# Should we fire some cool fireworks at location of every player after the game ends?
+Firework-When-Game-Ends: true
+
+# Should players' name tags in game be hidden?
+Nametags-Hidden: false
+
+# Should blocks behind game signs change their color based on game state?
+# They will change color to:
+# - white (waiting for players) stained glass
+# - yellow (starting) stained glass
+# - orange (in game) stained glass
+# - gray (ending) stained glass
+# - black (restarting) stained glass
+# - red (inactive) stained glass
+Signs-Block-States-Enabled: true
+
+Update-Notifier:
+  # Should we check for updates on plugin start/after admin join?
+  # You REALLY should have this true!
+  Enabled: true
+  # Should we inform you when beta version is out?
+  # Also note that BETA IS NOT ALWAYS AS STABLE AS NORMAL RELEASE!
+  Notify-Beta-Versions: true
+
+# Don't edit it. But who's stopping you? It's your server!
+File-Version: 0
+
+# No way! You've reached the end! But... where's the dragon!?

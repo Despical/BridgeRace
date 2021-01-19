@@ -1,0 +1,192 @@
+#     You can translate Bridge Race messages here.
+#             Color codes (&) supported.
+#
+#              Use \n to make new line
+#        Some messages like kit and kit items
+#        descriptions don't support new lines
+# they are wrapped every 40 characters automatically
+#
+#     Some messages support their own placeholders
+#                  like %player%
+
+# Bridge Race Commands Messages
+Commands:
+  Did-You-Mean: "&3Did you mean &b/%command%&3?"
+  Are-You-Sure: "&cAre you sure you want to do this action? Type the command again &6within 10 seconds &cto confirm!"
+  Teleported-To-The-Lobby: "&7Teleported to the lobby!"
+  Removed-Game-Instance: "&aSuccessfully removed game instance!"
+  Already-Ending: "&cThis arena is already in ending stage!"
+  No-Arena-Like-That: "&cNo arena with that ID!"
+  Look-Sign: "&cYou have to look at a sign to perform this command!"
+  Type-Arena-Name: "&cPlease type arena ID!"
+  No-Free-Arenas: "&cThere are no free arenas!"
+  Statistics:
+    Type-Name: "&cPlease type statistic name to view!"
+    Invalid-Name: "&cName of statistic is invalid! Type: win_streak, games_played, wins and loses."
+    Header: "&8&m-------------------[&6 Top 10 &8&m]-------------------"
+    Format: "&e#%position% %name% - %value% &7%statistic%"
+  Only-By-Player: "&cYou can execute this command only as player!"
+  Not-Playing: "&cYou must play to execute this command!"
+  No-Permission: "&cYou don't have permission to use this command!"
+  Admin-Commands:
+    Teleported-To-Player: "&aTeleported to player!"
+    Player-Not-Found: "&cPlayer not found with that name!"
+    Success-Reload: "&aSystem successfully reloaded all configurations and arenas!"
+    List-Command:
+      Format: "&aExisting arenas: &7%list%"
+      No-Arenas-Created: "&cThere are no game instances!"
+  Stats-Command:
+    Header: "&l-----[YOUR STATS]-----"
+    Header-Other: "&l-----[STATS FOR %player%]-----"
+    Footer: "&l----------------------"
+    Kills: "&aKills: &e"
+    Deaths: "&aDeaths: &e"
+    Wins: "&aWins: &e"
+    Loses: "&aLoses: &e"
+    Games-Played: "&aGames played: &e"
+    Win-Streak: "&aWin Streak: &e"
+
+# In-game scoreboard messages.
+# Please do not use more than 48 chars here! COLOR CODES INCLUDED.
+# Can be used up to 144 characters in 1.14 and higher versions.
+Scoreboard:
+  Title: "&e&lBridge Race"
+  Content:
+    # Contents of scoreboard for players
+    Playing:
+      - ""
+      - "&fTime Left: %formatted_time%"
+      - ""
+      - "&f&lOpponent:"
+      - "  &7%opponent%"
+      - ""
+      - "&fCurrent Streak: &a%win_streak%"
+      - ""
+      - "&ewww.despical.com"
+    Waiting:
+      - ""
+      - "&fMap: &a%mapname%"
+      - "&fPlayers: &a%players%/2"
+      - ""
+      - "&fWaiting..."
+      - ""
+      - "&ewww.despical.com"
+    Starting:
+      - ""
+      - "&fMap: &a%mapname%"
+      - "&fPlayers: &a%players%/2"
+      - ""
+      - "&fStarting in &a%time%s"
+      - ""
+      - "&ewww.despical.com"
+
+# Has usage only when bossbar is enabled in config.yml
+Bossbar:
+  Main-Title: "&a&lBridge Race &f&l- &6&lDespical"
+  Starting-In: "&f&lStarting in: &e&l%time%"
+  Waiting-For-Players: "&4&lWaiting for more players..."
+  In-Game-Info: "&e&lPlaying &f&lBridge Race &e&lby &b&lDESPICAL"
+  Game-Ended: "&c&lGame has ended! You were playing &b&lBridge Race"
+
+In-Game:
+  #Used in most game messages.
+  Plugin-Prefix: "&8[&eBridge Race&8] "
+  Already-Playing: "&cYou are already queued for a game! You can leave a game with /br leave."
+  Join-No-Permission: "&cYou don't have &6%permission% &cpermission to join this arena!"
+  Full-Game-No-Permission: "&cYou don't have the permission to join full games!"
+  No-Slots-For-Premium: "&cThis game is already full of premium players! Sorry!"
+  You-Are-Spectator: "&cYou're now a spectator! You can fly now!"
+  Only-Command-Ingame-Is-Leave: "&cYou have to leave the game first to perform commands. The only command that works is /br leave!"
+  # Join cancelled via external plugin that uses Bridge Race API.
+  Join-Cancelled-Via-API: "&cYou can't join this game!"
+  Arena-Not-Configured: "&cArena is not configured yet! Contact staff!"
+  Game-Chat-Format: "&7%player%: &f%message%"
+  Spectator:
+    Spectator-Item-Name: "&b&lTeleporter &7(Right Click)"
+    Spectator-Menu-Name: "&8Teleporter"
+    Target-Player-Score: "&7Placed blocks: %placed_blocks%"
+    Settings-Menu:
+      Item-Name: "&b&lSpectator settings &7(Right Click)"
+      Inventory-Name: "&8Spectator settings"
+      Speed-Name: "&aSpeed"
+      No-Speed: "&aNo Speed"
+      Enable-Night-Vision: "&aEnable Night Vision"
+      Enable-Night-Vision-Lore:
+        - "&7Click to enable night vision!"
+      Disable-Night-Vision: "&cDisable Night Vision"
+      Disable-Night-Vision-Lore:
+        - "&7Click to disable night vision!"
+      Hide-Spectators: "&cHide Spectators"
+      Hide-Spectators-Message: "&cYou can no longer see other spectators!"
+      Hide-Spectators-Lore:
+        - "&7Click to hide other spectators!"
+      Show-Spectators: "&aShow Spectators"
+      Show-Spectators-Message: "&aYou can now see other spectators!"
+      Show-Spectators-Lore:
+        - "&7Click to show other spectators!"
+  Messages:
+    Lobby-Messages:
+      Start-In: "&eThe game starts in &c%time%&e seconds!"
+      Waiting-For-Players: "&7Waiting for player... We need 2 players to start."
+      Enough-Players-To-Start: "&7Now we have enough players. The game is starting soon!"
+      Game-Started:
+        - "&a&l---------------------------------------------"
+        - "&f&lBridge Race"
+        - ""
+        - "&e&lEliminate your opponents!"
+        - ""
+        - "&f&lOpponent: &7%opponent%"
+        - ""
+        - "&a&l---------------------------------------------"
+      Kicked-For-Premium-Slot: "&c%player% got removed from the game to make a place for premium player!"
+      You-Were-Kicked-For-Premium-Slot: "&cYou got kicked out of the game to make a place for a premium player!"
+    Join: "&7%player%, &ehas joined (&b%players%&e/&b2&e)!"
+    Leave: "&7%player%, &eleft the game (&b%players%&e/&b2&r)!"
+    Game-End-Messages:
+      Titles:
+        Win: "&6&lVICTORY!"
+        Lose: "&c&lGame Over!"
+      Subtitles:
+        Win: "&f%player% won the Race!"
+        Lose: "&f%player% won the Race!"
+      Summary-Message:
+        - "&a&m----------------------------------------------------"
+        - "&e&lBridge Race &7- &f&l%duration%"
+        - ""
+        - "&7%winner% &e&lWINNER! &7%loser%"
+        - "&a%winner_placed_blocks% &7- &f&lPlaced Blocks &7- &a%loser_placed_blocks%"
+        - "&a%winner_broken_blocks% &7- &f&lBroken Blocks &7- &a%loser_broken_blocks%"
+        - "&a%winner_fell_into_void% &7- &f&lFell Into Void &7- &a%loser_fell_into_void%"
+        - "&a%winner_average_placed_blocks% &7- &f&lPlaced Block Average &7- &a%loser_average_placed_blocks%"
+        - ""
+        - "&a&m----------------------------------------------------"
+    Admin-Messages:
+      Stopped-Game: "&bAn admin has been force stopped the game by command!"
+
+Signs:
+  Please-Type-Arena-Name: "&cPlease type arena name in second line!"
+  Arena-Doesnt-Exists: "&cArena with that name doesn't exists!"
+  Doesnt-Have-Permission: "&cYou don't have enough permission to break this sign!"
+  Sign-Created: "&aSign created successfully!"
+  Sign-Removed: "&aSign successfully removed!"
+  Game-States:
+    Waiting: "&lWaiting..."
+    Inactive: "&lInactive..."
+    In-Game: "&lIn-game"
+    Starting: "&e&lStarting"
+    Full-Game: "&c&lFULL"
+    Ending: "&lEnding"
+    Restarting: "&c&lRestarting"
+  Lines:
+    - "&4&lBridge Race"
+    - "%state%"
+    - "%mapname%"
+    - "&5[%players%/2]"
+
+Validator:
+  Invalid-Arena-Configuration: "[Bridge Race] Arena %arena% has invalid configuration! Missing node: %error%"
+  Instance-Started: "[Bridge Race] Arena %arena% instance successfully started!"
+  No-Instances-Created: "[Bridge Race] There are no arena instances created in configuration!"
+
+# Don't edit it. But who's stopping you? It's your server!
+File-Version: 0

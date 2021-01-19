@@ -1,0 +1,46 @@
+#
+#             Bridge Race Rewards Configuration
+#
+#                    Placeholders list:
+#             %player% - Current player name
+#             %mapname% - Name of map
+#             %arena-id% - Arena Identifier
+#             %players% - Number of players in game
+#
+#        Commands are executed by default by CONSOLE, use "p:" to preform command by player
+#  You can use chance to execute command adding "chance(NUMBER):" (ex chance(10):) at the beginning of command
+#
+#  Commands examples:
+#    - p:say Hello everyone in %mapname%!             # Player will say "Hello everyone in <map name here>"
+#    - broadcast Game %arena-id% has ended!           # Will broadcast "Game <arena name here> has ended" message
+#    - chance(1):p:say I was very lucky!              # Player has %1 chance to say "I was very lucky!"
+#    - p:chance(99):spawn                             # Player has %99 chance to teleport to spawn
+#       ^ YOU CANt EVEN SWAP CHANCE WITH PLAYER!
+#    - chance(50):eco give %player% 10                # Console has %50 chance to give player 10$
+#
+#    Just add example reward:
+#    - script:player.sendMessage("oh, hi %player%");      # It will send "oh, hi <player name>" to player! 100% plain Java!
+#    - script:server.broadcastMessage("hello everyone");  # Broadcasts "hello everyone" to whole server
+#    - script:player.getInventory().addItem(new org.bukkit.inventory.ItemStack(org.bukkit.Material.DIRT));
+#         ^ Gives player dirt item (you must always use direct package names for not provided objects)
+#
+#                               All script provided objects:
+#            player - Player object (API methods https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html)
+#   arena - Bridge Race arena object (API methods Gonna Replace Here With Javadoc.io When I Push Project To Central Repo)
+#            server - Bukkit server object (API methods https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Server.html)
+
+# Rewards must be enabled via config.yml first!
+rewards:
+  # Commands performed when player wins the game
+  win:
+    - eco give %player% 2
+    - say I won the game!
+  # Commands performed when player loses the game
+  lose:
+    - chance(10):eco give %player% 8
+    - say I lost the game!
+  # Commands performed when game finishes
+  # This reward will be given to both players in arena
+  endgame:
+    - say %mapname% has ended!
+    - say Ooh and there were playing %players% players

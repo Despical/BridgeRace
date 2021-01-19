@@ -1,0 +1,27 @@
+name: BridgeRace
+main: me.despical.bridgerace.Main
+author: Despical
+version: 1.0.0
+api-version: 1.13
+softdepend: [Multiverse-Core, PlaceholderAPI]
+
+commands:
+  BridgeRace:
+    description: Bridge Race commands
+    aliases: [brace, br]
+
+permissions:
+  br.admin.*:
+    default: op
+    children:
+      br.updatenotify: true
+      br.admin: true
+      br.admin.create: true
+      br.admin.setup: true
+      br.admin.delete: true
+      br.admin.list: true
+      br.admin.stopgame: true
+      br.admin.forcestart: true
+      br.admin.addsign: true
+      br.admin.sign.create: true
+      br.admin.sign.break: true
